@@ -1,0 +1,372 @@
+.fundo {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangulo-esquerdo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 300px;
+}
+
+.triangulo-direito{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 700px;
+}
+
+.titulo-mobile {
+    display: none;
+}
+
+.card {
+    max-width: 900px;
+    width: 90%;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 999;
+
+    .informacoes {
+        background: url('../assets/Imagem-Apresentação.png');
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        width: 50%;
+        height: 100%;
+        padding: 20px 0px 0px 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0px;
+        list-style-position: inside;
+
+        .titulo {
+            color: $cor-branco;
+            font-size: 24px;
+            font-weight: 600;
+            width: 95%;
+        }
+
+        .lista {
+            display: flex;
+            flex-direction: column;
+            gap: 15px 0px;
+
+            .lista-item {
+                color: $cor-branco;
+                font-size: 18px;
+                font-weight: 400;
+    
+            }
+        }
+    }
+
+    .cadastro {
+        width: 50%;
+        height: 100%;
+        background-color: $cor-fundo-cinza;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0px;
+
+        .escrita {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+
+            .titulo {
+                color: $cor-branco;
+                font-size: 24px;
+                font-weight: 600;
+                width: 95%;
+            }
+
+            .conta {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0px 10px;
+
+                .paragrafo {
+                    color: $cor-branco;
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+
+                .link {
+                    color: $cor-branco;
+                    font-size: 15px;
+                    font-weight: 300;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .botao {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px 0px;
+
+            .botao-primeiro {
+                display: flex;
+                flex-direction: column;
+                gap: 10px 0px;
+                width: 90%;
+    
+                .item {
+                    position: relative;
+                    background-color: $cor-amarelo;
+                    width: 100%;
+                    height: 55px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    color: $cor-branco;
+                    font-size: 16;
+                    font-weight: 600;
+                }
+
+                #google {
+                    position: absolute;
+                    width: 35px;
+                    left: 20px;
+                }
+            }
+            .opcao {
+                color: $cor-branco;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            .botao-secundario {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 90%;
+
+                .item {
+                    position: relative;
+                    background-color: $cor-amarelo;
+                    width: 45%;
+                    height: 55px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    color: $cor-branco;
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+
+                #apple {
+                    position: absolute;
+                    width: 25px;
+                    left: 20px;
+                    top: 10px;
+                }
+
+                #facebook {
+                    position: absolute;
+                    width: 25px;
+                    left: 12px;
+                }
+            }
+        }
+
+        .card-info {
+            color: $cor-branco;
+            width: 90%;
+            font-size: 12px;
+            line-height: 1.5em;
+            font-weight: 400;
+        }
+    }
+}
+
+@media(max-width: 950px) {
+    .card .cadastro .botao .botao-primeiro .item {
+        font-size: 14px;
+       
+    }
+
+    .card .cadastro .botao .botao-secundario .item {
+        font-size: 13px;
+       
+    }
+}
+
+@media(max-width: 820px) {
+
+    .card .informacoes .titulo {
+        font-size: 21px;
+    }
+
+    .card .informacoes .lista .lista-item {
+        font-size: 15px;
+    }
+
+    .card .informacoes {
+        width: 45%;
+    }
+
+    .card .cadastro .escrita .titulo {
+        font-size: 22px;
+    }
+
+    .card .cadastro{
+        width: 55%;
+    }
+
+    .card .cadastro .botao .botao-secundario .item {
+       width: 49%;
+       
+    }
+}
+
+@media(max-width: 680px) {
+    .fundo {
+        flex-direction: column;
+        gap: 35px 0px;
+    }
+
+    .titulo-mobile {
+        display: block;
+        z-index: 999;
+        font-size: 30px;
+        font-weight: 600;
+        width: 85%;
+        text-align: center;
+        line-height: 1.2em;
+
+        span {
+            color: $cor-amarelo;
+        }
+    }
+
+    .card {
+        width: 80%;
+    }
+    .card .informacoes  {
+        width: 0%;
+        display: none;
+    }
+
+    .card .cadastro{
+        width: 100%;
+    }
+
+    .card .cadastro .escrita {
+        align-items: center;
+    }
+    .card .cadastro .escrita .titulo  {
+        text-align: center;
+    }
+
+    .card .cadastro .botao .botao-primeiro .item {
+        width: 80%;
+        margin: auto;
+    }
+
+    .card .cadastro .botao .botao-secundario {
+        justify-content: center;
+        gap: 0px 20px;
+    }
+
+    .card .cadastro .botao .botao-secundario .item {
+        width: 38%;
+    }
+
+    .card .cadastro .card-info  {
+        text-align: center;
+        width: 85%;
+    }
+}
+
+@media(max-width: 560px) {
+    .card {
+        width: 92%;
+    }
+
+    .card .cadastro .botao .botao-primeiro .item {
+        width: 95%;
+    }
+
+    .card .cadastro .botao .botao-secundario .item {
+        width: 45%;
+    }
+}
+
+@media(max-width: 400px) {
+
+    .titulo-mobile {
+        font-size: 26px;
+    }
+
+    .card .cadastro .escrita .titulo  {
+        font-size: 20px;
+    }
+    .card .cadastro .escrita .conta .paragrafo  {
+        font-size: 13px;
+    }
+
+    .card .cadastro .botao .botao-primeiro .item  {
+        font-size: 12px;
+    }
+
+    .card .cadastro .botao .botao-secundario .item span {
+        display: none;
+    }
+
+    .card .cadastro .botao .botao-secundario .item #apple,
+    .card .cadastro .botao .botao-secundario .item #facebook {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card .cadastro .card-info  {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 320px) {
+    .card .cadastro .botao .botao-primeiro .item span {
+        display: none;
+    }
+
+    .card .cadastro .botao .botao-primeiro .item #google {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card .cadastro .escrita .titulo  {
+        font-size: 18px;
+    }
+    .card .cadastro .escrita .conta .paragrafo,  
+    .card .cadastro .escrita .conta .link  {
+        font-size: 12px;
+    }
+   
+    .fundo {
+        overflow-x: hidden;
+    }
+}
+
